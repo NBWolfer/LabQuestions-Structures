@@ -312,34 +312,34 @@ namespace QuestionAttempts
             return (IsPrime(Convert.ToInt32(reversecont)) && IsPrime(cont));
         }
 
-        public static void Main()
-        {
-            DLList dLList = new DLList();
-            StreamReader streamReader = new StreamReader(@"C:\Users\Mahmut Enes\Desktop\Coding\C#\QuestionAttempts\QuestionAttempts\Sayilar.txt");
-            string line = streamReader.ReadLine();
-            while(line!= null)
-            {
-                Insertlast(dLList,Convert.ToInt32(line));
-                line = streamReader.ReadLine();
-            }
-            streamReader.Close();
-            Printlist(dLList);
-            int lasaCount = LASACounter(dLList);
-            int tauCount = TAUCounter(dLList);
+        //public static void Main()
+        //{
+        //    DLList dLList = new DLList();
+        //    StreamReader streamReader = new StreamReader(@"C:\Users\Mahmut Enes\Desktop\Coding\C#\QuestionAttempts\QuestionAttempts\Sayilar.txt");
+        //    string line = streamReader.ReadLine();
+        //    while(line!= null)
+        //    {
+        //        Insertlast(dLList,Convert.ToInt32(line));
+        //        line = streamReader.ReadLine();
+        //    }
+        //    streamReader.Close();
+        //    Printlist(dLList);
+        //    int lasaCount = LASACounter(dLList);
+        //    int tauCount = TAUCounter(dLList);
             
-            if(lasaCount> tauCount)
-            {
-                BubbleSort(dLList);
-            }
-            else if(tauCount> lasaCount)
-            {
-                RecursiveInsertionSort(dLList);
-            }
-            else
-            {
-                SelectionSort(dLList);
-            }
-            Printlist(dLList);
-        }
+        //    if(lasaCount> tauCount)
+        //    {
+        //        BubbleSort(dLList);
+        //    }
+        //    else if(tauCount> lasaCount)
+        //    {
+        //        RecursiveInsertionSort(dLList);
+        //    }
+        //    else
+        //    {
+        //        SelectionSort(dLList);
+        //    }
+        //    Printlist(dLList);
+        //}
     }
 }
