@@ -24,7 +24,7 @@ namespace QuestionAttempts
 
     public class AVLTree
     {
-        private AVLNode root;
+        public AVLNode root;
 
         public AVLTree()
         {
@@ -237,6 +237,15 @@ namespace QuestionAttempts
             newRoot.height = 1 + Math.Max(GetHeight(newRoot.left), GetHeight(newRoot.right));
 
             return newRoot;
+        }
+        public void InOrder(AVLNode node)
+        {
+            if (node != null)
+            {
+                InOrder(node.left);
+                Console.Write(node.value + " ");
+                InOrder(node.right);
+            }
         }
     }
 }

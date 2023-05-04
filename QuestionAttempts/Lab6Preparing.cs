@@ -161,49 +161,50 @@ namespace QuestionAttempts
             arr[j] = temp;
         }
 
-        public static void Main()
-        {
-            int[] array = new int[20];
-            int[] array2 = new int[20];
-            int[] array3 = new int[20];
-            Random rnd = new Random();
-            for (int i=0; i<array.Length; i++)
-            {
-                array[i]= rnd.Next(-100,0);
-                array2[i]= rnd.Next(0,100);
-                array3[i] = rnd.Next(100,200);
-                Console.Write(array[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < array2.Length; i++)
-            {
-                Console.Write(array2[i] + " ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < array3.Length; i++)
-            {
-                Console.Write(array3[i] + " ");
-            }
-            Console.WriteLine("\n");
-            array = MergeSort(array);
-            Console.WriteLine("\nMerge Sort");
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
-            Console.WriteLine("\nQuick Sort");
-            array2 = QuickSort(array2,0,array2.Length-1);
-            for (int i = 0; i < array2.Length; i++)
-            {
-                Console.Write(array2[i] + " ");
-            }
-            Console.WriteLine("\nV2 Quick Sort");
-            array3 = QuickSort(array3, 0, array3.Length - 1);
-            for (int i = 0; i < array3.Length; i++)
-            {
-                Console.Write(array3[i] + " ");
-            }
-            Console.WriteLine("\n");
-        }
+        //public static void Main()
+        //{
+        //    int[] array = new int[20];
+        //    int[] array2 = new int[20];
+        //    int[] array3 = new int[20];
+        //    Random rnd = new Random();
+        //    for (int i=0; i<array.Length; i++)
+        //    {
+        //        array[i]= rnd.Next(-100,0);
+        //        array2[i]= rnd.Next(0,100);
+        //        array3[i] = rnd.Next(100,200);
+        //        //Console.Write(array[i] + " ");
+        //    }
+        //    //Console.WriteLine();
+        //    //for (int i = 0; i < array2.Length; i++)
+        //    //{
+        //    //    Console.Write(array2[i] + " ");
+        //    //}
+        //    //Console.WriteLine();
+        //    //for (int i = 0; i < array3.Length; i++)
+        //    //{
+        //    //    Console.Write(array3[i] + " ");
+        //    //}
+        //    //Console.WriteLine("\n");
+        //    //array = MergeSort(array);
+        //    //Console.WriteLine("\nMerge Sort");
+        //    //for (int i = 0; i < array.Length; i++)
+        //    //{
+        //    //    Console.Write(array[i] + " ");
+        //    //}
+        //    //Console.WriteLine("\nQuick Sort");
+        //    //array2 = QuickSort(array2,0,array2.Length-1);
+        //    //for (int i = 0; i < array2.Length; i++)
+        //    //{
+        //    //    Console.Write(array2[i] + " ");
+        //    //}
+        //    //Console.WriteLine("\nV2 Quick Sort");
+        //    //array3 = QuickSort(array3, 0, array3.Length - 1);
+        //    //for (int i = 0; i < array3.Length; i++)
+        //    //{
+        //    //    Console.Write(array3[i] + " ");
+        //    //}
+        //    //Console.WriteLine("\n");
+
+        //}
     }
 }

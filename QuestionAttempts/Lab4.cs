@@ -240,30 +240,30 @@ namespace QuestionAttempts
             return temp;
         }
 
-        //public static void Main()
-        //{
-        //    Tree tree = new Tree();
-        //    int num=1;
+        public static void Main()
+        {
+            Tree tree = new Tree();
+            int num = 1;
 
-        //    // A)
-        //    while (num != 0)
-        //    {
-        //        Console.Write("Eklemek istediğiniz değeri girin: ");
-        //        num = Convert.ToInt32(Console.ReadLine());
-        //        if(num != 0)
-        //            tree.root = AddNode(tree.root, num);
-        //    }
+            // A)
+            while (num != 0)
+            {
+                Console.Write("Eklemek istediğiniz değeri girin: ");
+                num = Convert.ToInt32(Console.ReadLine());
+                if (num != 0)
+                    tree.root = AddNode(tree.root, num);
+            }
 
-        //    // B)
-        //    Console.Write("\nBir sayı girin:");
-        //    int contNum = Convert.ToInt32(Console.ReadLine());
+            // B)
+            Console.Write("\nBir sayı girin:");
+            int contNum = Convert.ToInt32(Console.ReadLine());
 
-        //    // B-1
-        //    BFSIter(tree.root, contNum);
-        //    Console.WriteLine();
-        //    // B-2
-        //    DFSIter(tree.root, contNum);
+            // B-1
+            BFSIter(tree.root, contNum);
+            Console.WriteLine();
+            // B-2
+            DFSIter(tree.root, contNum);
 
-        //}
+        }
     }
 }
