@@ -153,6 +153,54 @@ namespace QuestionAttempts
                 }
                 ApplyHeap( arr,this.root, 0);
             }
+            //public void MinHeap()
+            //{
+            //    ConvertBSTToMinHeap(this.root);
+            //}
+            //private void ConvertBSTToMinHeap(BSTNode root)
+            //{
+            //    // Step 1: Perform inorder traversal of the BST and store the values in a list
+            //    List<int> inorder = new List<int>();
+            //    InorderTraversal(root, inorder);
+            //    inorder.Reverse();
+            //    // Step 2: Build a min-heap from the list of values
+            //    BuildMinHeap(root, inorder, 0);
+            //}
+
+            //// Perform inorder traversal of the BST and store the values in a list
+            //private void InorderTraversal(BSTNode root, List<int> inorder)
+            //{
+            //    if (root != null)
+            //    {
+            //        InorderTraversal(root.left, inorder);
+            //        inorder.Add(root.data);
+            //        InorderTraversal(root.right, inorder);
+            //    }
+            //}
+
+            //// Build a min-heap from the list of values
+            //private int BuildMinHeap(BSTNode root, List<int> inorder, int i)
+            //{
+            //    if (i < inorder.Count)
+            //    {
+            //        root.data = inorder[i];
+            //        i++;
+
+            //        if (i < inorder.Count)
+            //        {
+            //            root.left = new BSTNode(0);
+            //            i = BuildMinHeap(root.left, inorder, i);
+            //        }
+
+            //        if (i < inorder.Count)
+            //        {
+            //            root.right = new BSTNode(0);
+            //            i = BuildMinHeap(root.right, inorder, i);
+            //        }
+            //    }
+
+            //    return i;
+            //}
 
             private void MinHeapify(int[] arr, int n)
             {
@@ -204,15 +252,17 @@ namespace QuestionAttempts
                 {
                     return;
                 }
+
                 node.data = arr[i];
+
                 if (2 * i + 1 < arr.Length)
                 {
-                    node.left.data = arr[2*i+1];
+                    node.left.data = arr[2 * i + 1];
                     ApplyHeap(arr, node.left, 2 * i + 1);
                 }
                 if (2 * i + 2 < arr.Length)
                 {
-                    node.right.data = arr[2*i+2];
+                    node.right.data = arr[2 * i + 2];
                     ApplyHeap(arr, node.right, 2 * i + 2);
                 }
             }
@@ -236,25 +286,27 @@ namespace QuestionAttempts
             }
 
         }
-        public static void Main()
-        {
-            BST bst = new BST();
-            Console.WriteLine("Sayı sayısını yazın:");
-            int count = Convert.ToInt32(Console.ReadLine());
-            for(int i= 0; i < count; i++)
-            {
-                bst.Insert(Convert.ToInt32(Console.ReadLine()));
-            }
-            Console.WriteLine("\nInorder dolaşarak ağacın içindeki değerler:");
-            bst.Print();
-            bool minormax = false; // false ise max-heap yapısına uygun ağacı güncelliyor, true ise min-heap
-            Console.WriteLine("\n\nMax-heap yapısına uygun değiştirilen ağacın inorder dolaşarak değerleri:");
-            bst.ConvertToHeap(minormax);
-            bst.Print();
-            Console.WriteLine("\n\nMin-heap yapısına uygun değiştirilen ağacın inorder dolaşarak değerleri:");
-            minormax = true;
-            bst.ConvertToHeap(minormax);
-            bst.Print();
-        }
+        //public static void Main()
+        //{
+        //    BST bst = new BST();
+        //    Console.WriteLine("Sayı sayısını yazın:");
+        //    int count = Convert.ToInt32(Console.ReadLine());
+        //    for(int i= 0; i < count; i++)
+        //    {
+        //        bst.Insert(Convert.ToInt32(Console.ReadLine()));
+        //    }
+        //    Console.WriteLine("\nInorder dolaşarak ağacın içindeki değerler:");
+        //    bst.Print();
+        //    bool minormax = false; // false ise max-heap yapısına uygun ağacı güncelliyor, true ise min-heap
+        //    Console.WriteLine("\n\nMax-heap yapısına uygun değiştirilen ağacın inorder dolaşarak değerleri:");
+        //    bst.ConvertToHeap(minormax);
+
+        //    bst.Print();
+        //    Console.WriteLine("\n\nMin-heap yapısına uygun değiştirilen ağacın inorder dolaşarak değerleri:");
+        //    minormax = true;
+        //    bst.ConvertToHeap(minormax);
+
+        //    bst.Print();
+        //}
     }
 }
