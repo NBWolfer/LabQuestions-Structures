@@ -149,22 +149,22 @@ namespace QuestionAttempts
             }
         }
 
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                string originalText = "aabbccddeeff";
+        //class Program
+        //{
+        //    static void Main(string[] args)
+        //    {
+        //        string originalText = "aabbccddeeff";
 
-                // Metni sıkıştır
-                string compressedText = HuffmanCompression.Compress(originalText);
-                Console.WriteLine("Sıkıştırılmış metin: " + compressedText);
+        //        // Metni sıkıştır
+        //        string compressedText = HuffmanCompression.Compress(originalText);
+        //        Console.WriteLine("Sıkıştırılmış metin: " + compressedText);
 
-                // Metni aç
-                HuffmanTree tree = new HuffmanTree(originalText);
-                HuffmanNode root = tree.BuildTree();
-                string decompressedText = HuffmanCompression.Decompress(compressedText, root);
-                Console.WriteLine("Açılmış metin: " + decompressedText);
-            }
-        }
+        //        // Metni aç
+        //        HuffmanTree tree = new HuffmanTree(originalText);
+        //        HuffmanNode root = tree.BuildTree();
+        //        string decompressedText = HuffmanCompression.Decompress(compressedText, root);
+        //        Console.WriteLine("Açılmış metin: " + decompressedText);
+        //    }
+        //}
     }
 }
